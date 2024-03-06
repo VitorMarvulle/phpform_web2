@@ -25,6 +25,8 @@
             $cidade = $_POST['txtCidade'];
             $estado = $_POST['txtUF'];
             $texto = $_POST['txtSobre'];
+            $sexo_selecionado = $_POST['sexo'];
+            $array_interesses = $_POST['interesses'];
 
           echo "<br> Nome completo:   " . $nome;
           echo "<br> Email:   " . $email;
@@ -32,9 +34,29 @@
           echo "<br> Data de nascimento:   " . $data;
           echo "<br> Cidade:   " . $cidade;
           echo "<br> Estado:   " . $estado;
+          echo "<br>Sexo: ".$sexo_selecionado;
 
+
+          echo "<br>Areas de interesse: ";
+          foreach($array_interesses as $interesse){
+            echo "<li>$interesse</li>"; 
+          }
+          
           echo "<br>Color code is:" . $selected_color;
           echo "<div class='a' style='background-color: $selected_color'>";
+          echo "<br> Nome completo:   " . $nome;
+          echo "<br> Email:   " . $email;
+          echo "<br> Senha:   " . $senha;
+          echo "<br> Data de nascimento:   " . $data;
+          echo "<br> Cidade:   " . $cidade;
+          echo "<br> Estado:   " . $estado;
+          echo "<br>Sexo: ".$sexo_selecionado;
+
+
+          echo "<br>Areas de interesse: ";
+          foreach($array_interesses as $interesse){
+            echo "<li>$interesse</li>"; 
+          }
           echo "<p>Olá, meu nome é </p>" . $nome;
           echo "<h3>Texto sobre mim: </h3>";
           echo $texto;

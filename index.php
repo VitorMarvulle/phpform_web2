@@ -48,13 +48,13 @@
                   <div class="col">
                         <legend style="font-size: 110%;">Sexo</legend>
                       <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <input class="form-check-input" type="radio" name="sexo" value="Masculino" id="flexRadioDefault1">
                               <label class="form-check-label" for="flexRadioDefault1">
                               Masculino
                               </label>
                       </div>
                       <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                              <input class="form-check-input" type="radio" name="sexo" value="Feminino" id="flexRadioDefault2">
                               <label class="form-check-label" for="flexRadioDefault2">
                               Feminino
                               </label>
@@ -62,19 +62,19 @@
                       <br>
                         <legend style="font-size: 110%;">Interesses</legend>
                       <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                              <input class="form-check-input" name="interesses[]" type="checkbox" value="Música" id="flexCheckDefault">
                               <label class="form-check-label" for="flexCheckDefault">
                                 Música
                               </label>
                         </div>
                         <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="2" id="flexCheckChecked">
+                              <input class="form-check-input" name="interesses[]" type="checkbox" value="Tecnologia" id="flexCheckChecked">
                               <label class="form-check-label" for="flexCheckChecked">
                                 Tecnologia
                               </label>
                         </div>
                         <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="3" id="flexCheckChecked">
+                              <input class="form-check-input" name="interesses[]" type="checkbox" value="Esportes" id="flexCheckChecked">
                               <label class="form-check-label" for="flexCheckChecked">
                                 Esportes
                               </label>
