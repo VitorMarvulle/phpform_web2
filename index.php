@@ -7,8 +7,15 @@
   <title>Cadastro com Imagem e Background</title>
 </head>
 <body>
+<style>
+.parent {
+  min-height: 100vh;
 
-<div class="container w-50 p-3 text-primary-emphasis bg-dark-subtle border border-primary-subtle rounded-3">
+  }
+</style>
+
+<div class="parent container d-flex justify-content-center align-items-center h-100">
+<div class=" child container w-75 p-3 text-primary-emphasis bg-dark-subtle border border-primary-subtle rounded-3">
   <div class="row">
     <div class="col">
              <form method="POST" enctype="multipart/form-data" action="upload.php"> 
@@ -99,6 +106,7 @@
                     </div>
             </form>
   </div>
+</div>
 </div>
 </div>
 
