@@ -19,6 +19,11 @@ $selected_color= $_POST['clr'];
  
  
 <style>
+
+  h1{
+    margin: 5px;
+    padding: 5px;
+  }
  
  
   .raleway {
@@ -67,9 +72,17 @@ $selected_color= $_POST['clr'];
     $dir = './uploads/'; //Diretório para uploads
  
     move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
-    echo '<div class="child rounded alert alert-success " role="alert" align="center">';
+    echo '<div class="child rounded alert bg-light " role="alert" align="center">';
           //COLUNA 1 IMAGEM
           echo'<div class="container text-center">';
+
+            echo "<div class='row'>";
+            echo "<div class='col'>";
+            echo "<h1>Cadastro Realizado com sucesso!<h1>";
+            echo "</div>";
+            echo "</div>";
+
+
             echo'<div class="row">';
               echo'<div class="col-sm-6">';
                 echo'<img src="./uploads/' . $new_name . '" style="border-radius:50%" class="img img-responsive">';
@@ -88,16 +101,32 @@ $selected_color= $_POST['clr'];
                   $email = $_POST['txtEmail'];
                   $senha = $_POST['txtSenha'];
                   $data = $_POST['txtData'];
+
+                  $data = $_POST['txtData'];
+
+                  // separando yyyy, mm, ddd
+                  list($ano, $mes, $dia) = explode('-', $data);
+              
+                  // data atual
+                  $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+                  // Descobre a unix timestamp da data de nascimento do fulano
+                  $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+              
+                  // cálculo
+                  $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+                  
+
+
                   $cidade = $_POST['txtCidade'];
                   $estado = $_POST['txtUF'];
                   $texto = $_POST['txtSobre'];
                   $sexo_selecionado = $_POST['sexo'];
                   $array_interesses = $_POST['interesses'];
  
-                  echo "<br> <b>Nome completo:</b>   " . $nome;
+                  echo "<br> <b>Nome:</b>   " . $nome;
                   echo "<br> <b>Email:</b>   " . $email;
                   echo "<br> <b>Senha:</b>   " . $senha;
-                  echo "<br> <b>Data de nascimento:</b>   " . $data;
+                  echo "<br> <b>Idade:</b>   " . $idade ." anos";
                   echo "<br> <b>Cidade:</b>   " . $cidade;
                   echo "<br> <b>Estado:</b>   " . $estado;
                   echo "<br><b>Sexo:</b> ".$sexo_selecionado;

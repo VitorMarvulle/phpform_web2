@@ -17,33 +17,38 @@
 <div class="parent container d-flex justify-content-center align-items-center h-100">
 <div class=" child container w-75 p-3 text-primary-emphasis bg-dark-subtle border border-primary-subtle rounded-3">
   <div class="row">
+  <div class="container w-100 p-3 text-primary-emphasis bg-light mb-4 border border-primary-subtle rounded-3 d-flex justify-content-center align-items-center h-100">
+  <h1>Novo Cadastro:</h1>
+</div>
+  <div class="row">
+
     <div class="col">
              <form method="POST" enctype="multipart/form-data" action="upload.php"> 
-      
+        
         <div class="form-floating mb-4">
-          <input type="name" name="txtNome" class="form-control" id="floatingInput" placeholder=""/>
+          <input type="name" name="txtNome" required autofocus class="form-control" id="floatingInput" placeholder=""/>
           <label for="floatingInput">Nome Completo</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="email" name="txtEmail" class="form-control" id="floatingInput" placeholder=""/>
+          <input type="email" name="txtEmail" class="form-control" id="floatingInput" placeholder="" required/>
           <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="password" name="txtSenha" class="form-control" id="floatingInput" placeholder=""/>
+          <input type="password" name="txtSenha" class="form-control" id="floatingInput" placeholder="" required/>
           <label for="floatingInput">Senha</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="date" name="txtData" class="form-control" id="floatingInput" placeholder=""/>
+          <input type="date" name="txtData" class="form-control" id="floatingInput" placeholder="" required/>
           <label for="floatingInput">Ano de Nascimento</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="text" name="txtCidade" class="form-control" id="floatingInput" placeholder=""/>
+          <input type="text" name="txtCidade" class="form-control" id="floatingInput" placeholder="" required/>
           <label for="floatingInput">Cidade</label>
         </div>
 
         <div class="form-floating mb-4">
-          <select class="form-select" name="txtUF" id="floatingSelect" aria-label="Floating label select example">
-            <option selected>Selecione a UF</option>
+          <select required class="form-select"  name="txtUF" id="floatingSelect" aria-label="Floating label select example">
+            <option value="" selected >Selecione a UF</option>
             <option value="SP">SP</option>
             <option value="RJ">RJ</option>
             <option value="MG">MG</option>
@@ -55,7 +60,7 @@
                   <div class="col">
                         <legend style="font-size: 110%;">Sexo</legend>
                       <div class="form-check">
-                              <input class="form-check-input" type="radio" name="sexo" value="Masculino" id="flexRadioDefault1">
+                              <input required class="form-check-input" type="radio" name="sexo" value="Masculino" id="flexRadioDefault1">
                               <label class="form-check-label" for="flexRadioDefault1">
                               Masculino
                               </label>
@@ -88,15 +93,14 @@
                         </div>
                         <br><br>
                         <div class="form-floating">
-                              <textarea class="form-control" name="txtSobre" placeholder="Escreva aqui" id="floatingTextarea2" style="height: 100px"></textarea>
+                              <textarea required class="form-control" name="txtSobre" placeholder="Escreva aqui" id="floatingTextarea2" style="height: 100px"></textarea>
                               <label for="floatingTextarea2">Fale mais sobre você</label>
                         </div>
                       <br>
                       <label for="conteudo">Upload imagem do perfil:</label>
-                      <input type="file" name="pic" accept="image/*">
+                      <input  required type="file" name="pic" accept="image/*">
                       <br><br>
-                      <label for="conteudo">Cor background do perfil:</label>
-                      <br> 
+                      <label for="conteudo">Cor background do perfil:</label> 
                       <input name="clr" type="color"><br> <br>   
 
 
@@ -106,6 +110,7 @@
                     </div>
             </form>
   </div>
+</div>
 </div>
 </div>
 </div>
